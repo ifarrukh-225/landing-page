@@ -5,7 +5,7 @@
 }
 
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.7;
@@ -116,12 +116,12 @@ body {
 	animation-fill-mode: backwards;
 }
 
-/* Section One */
+/* Section About */
 
 .section-about {
-	/* background-color: #f7f7f7; */
+	background-color: #ffff;
 	padding: 25rem 0;
-	margin-top: -20vh;
+	margin-top: -30vh;
 }
 
 .section-heading {
@@ -130,14 +130,14 @@ body {
 	text-transform: uppercase;
 	font-weight: 800;
 	letter-spacing: 0.2rem;
-	color: #aca0dd;
+	color: #93a0ff;
 }
 
 .center-text {
 	text-align: center;
 }
 .margin-bottom {
-	margin-bottom: 8rem;
+	margin-bottom: 9rem;
 }
 
 .map {
@@ -171,7 +171,6 @@ body {
 	z-index: 20;
 	outline: 1rem solid #1abb3b;
 }
-
 .photo-1 {
 	left: 5%;
 	top: -2rem;
@@ -187,34 +186,45 @@ body {
 }
 
 /* City Info Section */
+.card-container {
+	height: 95vh;
+	margin-top: -3rem;
+	margin-left: 4.5rem;
+}
+.city-info {
+	height: 100vh;
+	margin-top: 10rem;
+}
 .main-card {
 	perspective: 150rem;
 	height: 35rem;
 	position: relative;
-	width: 85%;
+	width: 80%;
 }
-
 .card-side {
-	height: 35rem;
+	height: 28rem;
 	transition: all 0.9s ease;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	backface-visibility: hidden;
-	border-radius: 3px;
+	overflow: hidden;
+	border-radius: 5px;
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
-
 .card-front {
 	background-color: white;
 }
-
 .card-back {
-	background-color: #b4aadd;
+	background-image: url(./img/back-img.jpeg);
+	opacity: 0.8;
+	background-blend-mode: screen;
 	transform: rotateY(180deg);
+	background-size: cover;
+	background-position: center;
+	height: 28rem;
 }
-
 .main-card:hover .card-front {
 	transform: rotateY(-180deg);
 }
@@ -223,8 +233,203 @@ body {
 	transform: rotateY(0deg);
 }
 
-.card-picture {
+.picture-one {
+	background-image: linear-gradient(to right bottom, #7ed56f, #28b485),
+		url(./img/one.jpg);
 	background-size: cover;
+	background-blend-mode: screen;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+	height: 15rem;
+}
+.picture-two {
+	background-image: linear-gradient(to right bottom, #2998ff, #5643fa),
+		url(./img/two.png);
+	background-size: cover;
+	background-blend-mode: screen;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+	height: 15rem;
+}
+.picture-three {
+	background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
+		url(./img/three.png);
+	background-size: cover;
+	background-blend-mode: screen;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+	height: 15rem;
+}
 
-	width: 100%;
+.card-heading-one {
+	background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+	color: white;
+	font-size: 2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	position: absolute;
+	text-align: right;
+	top: 19rem;
+	right: 0rem;
+	padding: 0 7px 0 7px;
+}
+
+.card-heading-two {
+	background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+	color: white;
+	font-size: 2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	position: absolute;
+	text-align: right;
+	top: 19rem;
+	right: 0rem;
+	padding: 0 7px 0 7px;
+}
+
+.card-heading-three {
+	background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+	color: white;
+	font-size: 2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	position: absolute;
+	text-align: right;
+	top: 19rem;
+	right: 0rem;
+	padding: 0 7px 0 7px;
+}
+
+.card-btn {
+	position: absolute;
+	top: 73%;
+	left: 30%;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 100px;
+	transition: all 0.2s;
+	background-color: white;
+	color: #777;
+}
+
+.card-btn:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+	color: #777;
+}
+.card-btn:active {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Booking_ Section */
+
+.section-book {
+	height: 95vh;
+	padding: 10rem 0;
+	background-image: linear-gradient(to right bottom, #b2baf5, #8592f7);
+}
+
+.book {
+	background-image: linear-gradient(
+			105deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(255, 255, 255, 0.9) 50%,
+			transparent 50%
+		),
+		url(./img/book.png);
+	background-size: 100%;
+	height: 34rem;
+	width: 70rem;
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+	margin-top: -3rem;
+}
+
+.book-heading {
+	display: inline-block;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 0.2rem;
+	color: #93a0ff;
+	margin: 3rem;
+}
+
+.book-form {
+	width: 50%;
+	padding: 6rem;
+}
+
+.form__group {
+	margin-bottom: 2rem;
+}
+
+.form__input {
+	font-size: 1rem;
+	padding: 1rem 1rem;
+	border-radius: 2px;
+	background-color: rbga(#fff, 0.5);
+	border: none;
+	border-bottom: 3px solid transparent;
+	width: 36%;
+	display: block;
+	transition: all 0.3s;
+	margin-left: 3rem;
+}
+
+.form__input:focus {
+	outline: none;
+	box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);
+	border-bottom: 3px solid #55c57a;
+}
+
+.book-btn {
+	margin-left: 3rem;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 100px;
+	transition: all 0.2s;
+	border: 1px solid #93a0ff;
+	background-color: #93a0ff;
+	color: white;
+}
+
+.book-btn:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+	color: white;
+}
+.book-btn:active {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+
+.footer-navigation {
+	border-top: 1px solid #bdbaba;
+	padding-top: 0.5rem;
+	display: inline-block;
+}
+.footer {
+	background-color: #333;
+	padding: 3rem 0;
+	font-size: 1.2rem;
+}
+
+.footer-item {
+	list-style: none;
+	color: #f7f7f7;
+	display: inline-block;
+	margin-left: 1.2rem;
+	text-decoration: none;
+}
+.footer-item:hover {
+	color: #f7f7f7;
+}
+
+.footer-copyright {
+	border-top: 1px solid #bdbaba;
+	padding-top: 0.5rem;
+	color: #f7f7f7;
+	
 }
